@@ -1,0 +1,100 @@
+
+
+<html lang="en"> 
+
+
+  <body> 
+
+    <div class="container"> 
+
+      <div class="main-content"> 
+        
+ <H2  class="alert alert-success">  Pay Bill Amount : {{billAmount | currency:'INR'}} </H2>
+
+        <h2 class="alert alert-primary"> Pay with Netbanking </h2>
+
+      </div> 
+
+  
+
+
+
+  
+
+  
+
+      <div class="card-details"> 
+
+        <p>Pay using Credit or Debit card</p> 
+
+  <form   #myform="ngForm"  class="conatainer col-md-6" onsubmit="alert('Payment Success , Thank you')" >
+
+        <div class="form-group"> 
+
+          <label> Card Number </label> 
+
+          <input class="form-control"
+
+            type="text"  required  name="cno" #cno="ngModel" ngModel
+           
+            placeholder="###-###-###"/> 
+
+            <span style="color:red" *ngIf="cno.touched && cno.invalid">Card No is Mandatory </span>
+
+        </div> 
+
+        <br /> 
+
+        <div class="form-group"> 
+
+          <label> Expiry Date </label> 
+
+          <input type="date"   class="form-control" name="date"  required #date="ngModel" ngModel
+
+                 placeholder="DD-MM-YY" /> 
+                 <span style="color:red" *ngIf="date.touched && date.invalid">Date is Mandatory </span>
+
+        </div> 
+
+  
+
+        <div class="form-group"> 
+
+          <label> CVV number </label> 
+
+          <input type="password" class="form-control" name="cvv"  required #cvv="ngModel" ngModel
+
+                 placeholder="xxx" />
+                 
+                 <span style="color:red" *ngIf="cvv.touched && cvv.invalid">CVV No is Mandatory </span>
+
+        </div> 
+
+        <div class="form-group"> 
+
+          <label> Card Holder name </label> 
+
+          <input
+
+            type="text"
+
+            class="form-control" required name="name"  #name="ngModel" ngModel
+
+            placeholder="Enter your Name"/> 
+            <span style="color:red" *ngIf="name.touched && name.invalid">Card Holder Name is Mandatory </span>
+
+        </div> 
+
+        <button type="submit"  [disabled]="myform.invalid"
+
+      class="btn btn-primary"  >Pay</button> 
+
+      </form>    
+
+      </div> 
+
+    </div> 
+
+  </body> 
+
+</html>

@@ -1,0 +1,10 @@
+<h1 style="text-align: center; margin-top: 5%; ">WISHLIST</h1>
+<div class="container">
+        <table class="table">
+            <tr><th>Coupon Name</th><th>Discount Percentage<th></th></tr>
+            <tr *ngFor="let dis of discounts ">
+                <td>{{dis.name}}</td>
+                <td>{{dis.percentage}}%</td>
+            </tr>
+        </table>
+</div>

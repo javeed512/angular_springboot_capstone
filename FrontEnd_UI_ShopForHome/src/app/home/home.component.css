@@ -1,0 +1,35 @@
+
+
+/*------------------*/
+.wrapper{
+    margin-top: 2%;
+    width: 100%;
+    position:absolute;
+    height: fit-content;
+    display: grid;
+    justify-items: center;
+    align-items: center; 
+    text-align: center; 
+    overflow: hidden;     
+}
+.wrapper img{
+align-items: center;
+height: 200px;
+width: 200px;
+}
+
+.item{
+    width: 100%;
+    padding: 2%;
+    margin-bottom: 2%;
+   
+}
+@media (min-width: 400px) {
+.wrapper { grid-template-columns: repeat(1, 1fr); }
+}
+@media (min-width: 600px) {
+.wrapper { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 800px) {
+.wrapper { grid-template-columns: repeat(3, 2fr); }
+}

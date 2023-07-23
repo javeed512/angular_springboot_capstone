@@ -1,0 +1,20 @@
+.container{
+    margin-left: 13%;
+}
+h1{
+    margin-top: 3%;
+    font-size: 30px;
+    font-weight: 420;
+    margin-bottom: 1%;
+    color: #556273;
+}
+th{
+    align-items: center;
+    width: 500px;
+}
+.discount{
+    margin-top: 1%;
+    margin-left: 46%;
+    margin-bottom: 2%;
+    color: white;
+}

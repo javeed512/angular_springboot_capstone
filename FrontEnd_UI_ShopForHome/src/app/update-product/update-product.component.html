@@ -1,0 +1,76 @@
+<div class="container" style="align-self:center">
+      <h1 style="text-align: center;">Product Update Page</h1>
+
+  <form   #regForm="ngForm"  (ngSubmit)="editProduct(regForm.value)"    >
+
+        <div class="row">
+          <div class="col-md-6">
+
+            <div class="form-outline">
+                <label class="form-label" for="name">Name:</label>
+              <input type="text" placeholder="Name" name="name" required class="form-control form-control-lg" [(ngModel)]="productToUpdate.name"  />
+              
+            </div>
+
+          </div>
+          <div class="col-md-6">
+
+            <div class="form-outline">
+                <label class="form-label" for="price">Price:</label>
+              <input type="number" placeholder="Price" name="price" required  class="form-control form-control-lg"  [(ngModel)]="productToUpdate.price" />
+              
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-6 ">
+
+            <div class="form-outline">
+                <label for="url" class="form-label">Enter Image Url:</label>
+              <input type="text" placeholder="Enter Image Url"  class="form-control form-control-lg"  required name="url"  [(ngModel)]="productToUpdate.url" />
+            
+            </div>
+          </div>
+        
+          <div class="col-md-6">
+
+            <div class="form-outline">
+                <label class="form-label" for="quantity">Quantity:</label>
+              <input type="number" min="0" placeholder="Quantity" name="quantity"  required class="form-control form-control-lg"  [(ngModel)]="productToUpdate.quantity" />
+              
+            </div>
+
+          </div>
+        </div>
+          
+
+        <br>
+        <div class="row">
+          <div class="col-md-3">
+
+            <select class="select form-control-lg" required name="catagory" [(ngModel)]="productToUpdate.catagory" >
+              <option selected value="1" disabled>Choose Category</option>
+              <option value="HomeCategory">Home Categoty</option>
+              <option value="Festive Lights" >Lights</option>
+              <option value="Artificial Flowers">Artificial Flowers</option>
+              <option value="Garden Decor">Garden Decor</option>
+              <option value="Doormats">DoorMats</option>
+              <option value="Carpets">Carpets</option>
+              <option value="Table Lamps">Table Lamps</option>
+            </select>
+            
+
+          </div>
+
+          <div class="col-md-6" style="margin-left: 17%;">
+            <button class="btn btn-primary btn-lg" type="submit">Update Product</button>
+          </div>
+        </div>
+
+      
+
+      </form>
+</div>

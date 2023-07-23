@@ -1,0 +1,23 @@
+<h1 style="text-align: center; margin-top:4%;">Display List of Users</h1>
+
+
+    <button style="margin-left: 46%; margin-bottom: 2%;font-size: 1.25rem;" class="btn btn-sm btn-warning" routerLink="create-user">Create User</button>
+
+<div class="container col-md-6">
+    
+        <table class="table" >
+
+        <tr><th>ID</th><th>Email</th><th>Name</th><th>Password</th><th>Phone Number</th><th>Update</th><th>Delete</th></tr>
+
+        <tr *ngFor="let user of userList" ><td>{{user.id}}</td><td>{{user.email}}</td><td>{{user.name}}</td><td>{{user.password}}</td><td>{{user.phone}}</td>
+
+        <td>
+            <button  (click)="updateUser(user.id)" class="btn btn-sm btn-info" >
+            Update</button></td>
+        <td>
+            <button  (click)="deleteUser(user.id)"  class="btn btn-sm btn-danger">
+                Delete</button></td>
+        </tr>
+    </table>
+
+</div>

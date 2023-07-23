@@ -1,0 +1,76 @@
+
+
+<div class="container" style="align-self:center">
+    <h1 style="text-align: center;">Product Registration Page</h1>
+
+
+    <form   #regForm="ngForm"  (ngSubmit)="productRegistration(regForm.value)"    >
+
+        <div class="row">
+              <div class="col-md-6">
+
+                <div class="form-outline">
+                    <!-- <label class="form-label" for="name">Name:</label> -->
+                  <input type="text" placeholder="Name" name="name" required class="form-control form-control-lg" ngModel  />
+                </div>
+
+              </div>
+              <div class="col-md-6">
+                <div class="form-outline">
+                    <!-- <label class="form-label" for="price">Price:</label> -->
+                  <input type="number" placeholder="Price" name="price" required  class="form-control form-control-lg"  ngModel/>
+                </div>
+              </div>
+        </div>
+<br>
+
+        <div class="row">
+          <div class="col-md ">
+            <div class="form-outline">
+                <!-- <label for="url" class="form-label">Enter Image Url:</label> -->
+              <input type="text" placeholder="Enter Image Url" class="form-control form-control-lg"  required name="url"  ngModel/>
+            </div>
+          </div>
+        </div>
+        <br>
+
+          
+        
+        
+        <div class="row" style="margin-left:0% ;">
+          
+              <select class="form-select" aria-label="Default select example" class="select form-control-lg" required name="catagory" ngModel>
+              <option selected value="1" disabled>Choose Category</option>
+              <option value="Home Decor">Home Decor</option>
+              <option value="Lights" >Lights</option>
+              <option value="Artificial Flowers">Artificial Flowers</option>
+              <option value="Garden Decor">Garden Decor</option>
+              <option value="DoorMats">DoorMats</option>
+              <option value="Carpets">Carpets</option>
+              <option value="Electronics">Electronics</option>
+            </select>
+
+
+            <div style="margin-left:2%" class="col-md-9 ">
+
+              <div class="form-outline">
+                  <!-- <label class="form-label" for="quantity">Quantity:</label> -->
+                <input type="number" min="0" placeholder="Quantity" name="quantity"  required class="form-control form-control-lg"  ngModel/><br>
+                
+              </div>
+
+            </div>
+            
+            </div>
+      
+      
+      
+      
+      
+            <br>
+          
+
+          <button style="align-items: center; margin-left: 45%;" class="btn btn-primary btn-lg" type="submit">Create Product</button>
+
+      </form>
+</div>

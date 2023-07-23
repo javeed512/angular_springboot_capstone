@@ -1,0 +1,19 @@
+h1{
+   
+    font-size: 30px;
+    font-weight: 420;
+    margin-bottom: 5%;
+    color: #556273;
+}
+.container{
+    margin-top: 5%;
+   align-items: center;
+   padding: 3%;
+   border: solid #556273;
+}
+input{
+    margin-top: 1%;
+    font-size: 1.25rem;
+    margin-left: 30%;
+    /* border:solid #556273 ; */
+}
